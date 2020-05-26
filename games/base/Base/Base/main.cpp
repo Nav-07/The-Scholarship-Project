@@ -1,9 +1,28 @@
-#include "Display/Window.hpp"
+#include "Base.hpp"
+
+class Test : public Game {
+private:
+    Window window;
+public:
+    Test(): window(Window("Test", 640, 480)), Game("Game") {
+    }
+    void init() override {
+        window.init();
+        window.create();
+    }
+    void render() override {
+        window.clear();
+        window.show();
+    }
+    void destroy() override {
+        window.destroy();
+        mCloseEngine();
+    }
+};
 
 int main(int argc, char* argv[]) {
-    Window window("Test Window", 640, 480);
-    window.init();
-    window.create();
+    Test test;
+    test.init();
     
     SDL_Event e;
     bool running = true;
@@ -15,10 +34,9 @@ int main(int argc, char* argv[]) {
                 break;
             default:
                 break;
-        }
-        window.clear();
-        window.show();
+        };
     }
     
+    test.destroy();
     return 0;
 }
