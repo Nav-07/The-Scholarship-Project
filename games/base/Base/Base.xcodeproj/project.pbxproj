@@ -14,6 +14,7 @@
 		493FCB6F247D11DC008D548D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB6D247D11DC008D548D /* Game.cpp */; };
 		493FCB74247E4FAC008D548D /* Vector2f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB72247E4FAC008D548D /* Vector2f.cpp */; };
 		493FCB77247E503F008D548D /* Inputs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB75247E503F008D548D /* Inputs.cpp */; };
+		493FCB7A247E51A7008D548D /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB78247E51A7008D548D /* Entity.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,8 @@
 		493FCB73247E4FAC008D548D /* Vector2f.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector2f.hpp; sourceTree = "<group>"; };
 		493FCB75247E503F008D548D /* Inputs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Inputs.cpp; sourceTree = "<group>"; };
 		493FCB76247E503F008D548D /* Inputs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Inputs.hpp; sourceTree = "<group>"; };
+		493FCB78247E51A7008D548D /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		493FCB79247E51A7008D548D /* Entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				493FCB6A247D0E07008D548D /* Window.hpp */,
 				493FCB75247E503F008D548D /* Inputs.cpp */,
 				493FCB76247E503F008D548D /* Inputs.hpp */,
+				493FCB78247E51A7008D548D /* Entity.cpp */,
+				493FCB79247E51A7008D548D /* Entity.hpp */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				493FCB6F247D11DC008D548D /* Game.cpp in Sources */,
 				493FCB5D247D0CFD008D548D /* main.cpp in Sources */,
 				493FCB77247E503F008D548D /* Inputs.cpp in Sources */,
+				493FCB7A247E51A7008D548D /* Entity.cpp in Sources */,
 				493FCB6B247D0E07008D548D /* Window.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
