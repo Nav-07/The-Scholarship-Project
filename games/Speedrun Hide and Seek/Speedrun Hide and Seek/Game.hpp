@@ -11,7 +11,10 @@ private:
     void loadTexture(std::string file, std::string id);
     void destroyTextures();
 public:
-    Game() {  }
+    Window window;
+    bool isRunning = false;
+    
+    Game(): window(Window("Speedrun Hide and Seek", 640, 480)) {  }
     void init();
     void handleEvents();
     void update();
