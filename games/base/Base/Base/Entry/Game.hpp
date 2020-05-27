@@ -5,7 +5,11 @@
 #include <map>
 
 // The Imports for the Engine
-#include "../Display/Window.hpp"
+#include "../Engine/Window.hpp"
+#include "../Engine/Inputs.hpp"
+
+// Data Structures
+#include "../Data Structures/Vector2f.hpp"
 
 /*
 This class basically is a framework for the game itself and combines all the elements of the game engine and also allows the user to create textures and entities much easily.

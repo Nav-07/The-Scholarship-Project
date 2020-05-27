@@ -12,6 +12,8 @@
 		493FCB68247D0DF7008D548D /* libSDL2_image-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 493FCB67247D0DF7008D548D /* libSDL2_image-2.0.0.dylib */; };
 		493FCB6B247D0E07008D548D /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB69247D0E07008D548D /* Window.cpp */; };
 		493FCB6F247D11DC008D548D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB6D247D11DC008D548D /* Game.cpp */; };
+		493FCB74247E4FAC008D548D /* Vector2f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB72247E4FAC008D548D /* Vector2f.cpp */; };
+		493FCB77247E503F008D548D /* Inputs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB75247E503F008D548D /* Inputs.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +38,10 @@
 		493FCB6D247D11DC008D548D /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		493FCB6E247D11DC008D548D /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		493FCB70247D1363008D548D /* Base.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Base.hpp; sourceTree = "<group>"; };
+		493FCB72247E4FAC008D548D /* Vector2f.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2f.cpp; sourceTree = "<group>"; };
+		493FCB73247E4FAC008D548D /* Vector2f.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector2f.hpp; sourceTree = "<group>"; };
+		493FCB75247E503F008D548D /* Inputs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Inputs.cpp; sourceTree = "<group>"; };
+		493FCB76247E503F008D548D /* Inputs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Inputs.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,21 +77,24 @@
 		493FCB5B247D0CFD008D548D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				493FCB71247E4F9B008D548D /* Data Structures */,
 				493FCB6C247D11CB008D548D /* Entry */,
-				493FCB63247D0D07008D548D /* Display */,
+				493FCB63247D0D07008D548D /* Engine */,
 				493FCB70247D1363008D548D /* Base.hpp */,
 				493FCB5C247D0CFD008D548D /* main.cpp */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		493FCB63247D0D07008D548D /* Display */ = {
+		493FCB63247D0D07008D548D /* Engine */ = {
 			isa = PBXGroup;
 			children = (
 				493FCB69247D0E07008D548D /* Window.cpp */,
 				493FCB6A247D0E07008D548D /* Window.hpp */,
+				493FCB75247E503F008D548D /* Inputs.cpp */,
+				493FCB76247E503F008D548D /* Inputs.hpp */,
 			);
-			path = Display;
+			path = Engine;
 			sourceTree = "<group>";
 		};
 		493FCB64247D0DE2008D548D /* Frameworks */ = {
@@ -104,6 +113,15 @@
 				493FCB6E247D11DC008D548D /* Game.hpp */,
 			);
 			path = Entry;
+			sourceTree = "<group>";
+		};
+		493FCB71247E4F9B008D548D /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				493FCB72247E4FAC008D548D /* Vector2f.cpp */,
+				493FCB73247E4FAC008D548D /* Vector2f.hpp */,
+			);
+			path = "Data Structures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493FCB74247E4FAC008D548D /* Vector2f.cpp in Sources */,
 				493FCB6F247D11DC008D548D /* Game.cpp in Sources */,
 				493FCB5D247D0CFD008D548D /* main.cpp in Sources */,
+				493FCB77247E503F008D548D /* Inputs.cpp in Sources */,
 				493FCB6B247D0E07008D548D /* Window.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,14 +1,22 @@
 #include "Base.hpp"
 
+static SDL_Event e;
+static bool running = true;
 class Test : public Game {
 private:
     Window window;
+    Inputs inputs;
 public:
     Test(): window(Window("Test", 640, 480)), Game("Game") {
     }
     void init() override {
         window.init();
         window.create();
+    }
+    void update() override {
+        inputs.registerEventLoop(e);
+        if (inputs.isKeyDown(SDL_SCANCODE_ESCAPE))
+            running = false;
     }
     void render() override {
         window.clear();
@@ -23,18 +31,10 @@ public:
 int main(int argc, char* argv[]) {
     Test test;
     test.init();
-    
-    SDL_Event e;
-    bool running = true;
+
     while (running) {
-        SDL_PollEvent(&e);
-        switch (e.type) {
-            case SDL_QUIT:
-                running=false;
-                break;
-            default:
-                break;
-        };
+        test.update();
+        test.render();
     }
     
     test.destroy();
