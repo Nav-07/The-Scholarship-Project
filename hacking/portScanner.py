@@ -1,3 +1,5 @@
+# Nav 2020
+# This Port Scanner is Shit, Will certainly update it before the actual test.
 import sys
 import socket
 from datetime import datetime
