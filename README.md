@@ -1,15 +1,7 @@
 # The Scholarship Project
-The Scholarship Projct is Nav's Way to the Massachusetts Institution of Technology, Nav would basically apply for scholarship there in the later years, Nav would code mobile apps, desktop games, computer science project and even hack into FBI... Stay Tuned.
+The Scholarship Project is an open-source project created by Nav on 22 May 2020(His Birthday), The goal is to send this project to top universities of United States of America and wait for a scholarship, He is 14 years old at the time of creating this project, four years of hardwork will be in this project, including Goland, Python3, C, C++, Swift, Dart, Javascript, Java and many other languages, this project is basically my experience compressed into one single folder.
 
+## Bio : Nav
+Nav was Born on 22 May 2020, His full name is Navyan Pahwa, He moved to Australia on 13/14 May 2020, He learned to code in c++ in Australia, he studied in an Australian High School in Canberra, At the time of writing this, he is still not a Permanent Resident, He poses an indian passport and wants to get rid of it as fast as possible.
 
-## Project Ideas
-1. GitHub + Python3 or Go API, keep a track of your commits.
-
-
-This is Going to keep a track of my GitHub Commits, I would probably make a mobile app accompanying this idea, the app is going to show basic github data, this is just going to be for personal use, I would publish all of this stuff when I am 16(currently 14).
-
-
-2. A Simple Hide and Seek Game in C++ and SDL2
-
-
-The Player Basically has the task to find few objects in a map, the lowest time wins, every object would procedurally rendered. Speedrun Mode or Highest Score Mode?
+Nav uses a Macbook Pro 2019, 13 Inches, 128GB Storage, and Airpods(2nd Generation) as his Headphones. Support on [Patreon](https://www.patreon.com/Nav_07) would be appreciated. All the assets on this direcoty are created by Nav and all the code and assets are copyright free, these can be used commercially as well with no need of credits, etc.
