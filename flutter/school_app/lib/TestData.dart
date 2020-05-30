@@ -1,3 +1,5 @@
+// This file basically handles all the 'production' handling and has all the logic code. it takes care of all the models and rendering in general, this is just a test practise and is definately not the actual logic is going to look like.
+
 import 'package:flutter/material.dart';
 import 'package:school_app/AppData.dart';
 
@@ -38,6 +40,24 @@ Widget createList() {
 Widget showDetails(TestAssignment assignment) {
   return Container(
     child: Column(
+      children: <Widget>[
+        // editing the name of the assignment
+        Container( // the edit name container
+          margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+          child: ListTile(
+            title: Text(assignment.name, style: Style.Custom(Style.Medium, 'Montserrat', FontWeight.normal),),
+            trailing: Icon(Icons.edit), // the trailing would give an effect that this value is editable.
+          ),
+        ),
+        // editing the subject of the assignment
+        Container(
+          margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+          child: ListTile(
+            title: Text(assignment.subject, style: Style.Custom(Style.Medium, 'Montserrat', FontWeight.normal),),
+            trailing: Icon(Icons.edit),
+          ),
+        ),
+      ],
     ),
   );
 }
