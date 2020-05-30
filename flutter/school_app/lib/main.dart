@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:school_app/AppView.dart';
 
 class Application extends StatefulWidget {
   createState() => ApplicationState();
@@ -11,7 +12,7 @@ class ApplicationState extends State<Application> {
       // The Title of the App
       title: 'School Assignment Tracker',
       // The Home Widget
-      home: null,
+      home: AppView(), // The AppView Objects returns the structure where the app can be built upon.
     );
   }
 }
