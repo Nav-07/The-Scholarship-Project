@@ -11,7 +11,15 @@ class AppViewState extends State<AppView> {
       // the appbar property.
       appBar: AppBar(
         title: Text('School Assignment Tracker'),
-        centerTitle: true, // Center the title.
+        centerTitle: false, // Center the title.
+        actions: <Widget>[
+          IconButton( // This Button is used to create new assignments.
+            icon: Icon(Icons.add), 
+            onPressed: () {
+              // Create a New Assignment Right Here...
+            },
+          ),
+        ],
       ),
 
       // Wrap the SingleChildScrollView inside a Container to Enable the Margin Property.
