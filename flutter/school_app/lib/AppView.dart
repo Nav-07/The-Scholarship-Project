@@ -18,6 +18,9 @@ class AppViewState extends State<AppView> {
             icon: Icon(Icons.add), 
             onPressed: () {
               // Create a New Assignment Right Here...
+              setState(() {
+                Navigation.currentIndex = 3;
+              });
             },
           ),
         ],
@@ -36,7 +39,8 @@ class AppViewState extends State<AppView> {
 
       // bottom navigation bar
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: Navigation.currentIndex, // The Values are stored in a class in the AppData.dart file
+        currentIndex: Navigation.currentIndex >= 3 ? 2 : Navigation.currentIndex, // The Values are stored in a class in the AppData.dart file
+        selectedItemColor: Navigation.currentIndex >= 3 ? Colors.grey : Colors.blue,
         items: [
           BottomNavigationBarItem(title: Text('Home'), icon: Icon(Icons.home)), // placeholder icons, updated by FontAwesomeIcons
           BottomNavigationBarItem(title: Text('Tasks'), icon: Icon(Icons.check)),

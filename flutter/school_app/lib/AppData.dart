@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:school_app/Screens/Home.dart';
+import 'package:school_app/Screens/NewAssignments.dart';
 import 'package:school_app/Screens/Tasks.dart';
 import 'package:school_app/TestData.dart';
 
@@ -13,6 +14,11 @@ class Navigation { // Essential for Navigation.
     else if (currentIndex == 1) {
       TestDataData.reset(); // Make Sure to reset the data to avoid any bugs in later production
       returnValue = Tasks();
+    } else if (currentIndex == 2) {
+      // This is reserved for the settings screen.
+    } else if (currentIndex == 3) {
+      // This is for new assignment
+      returnValue = NewAssignment();
     }
     return returnValue; // Return the widget based on the currentIndex Variable.
   }
@@ -25,12 +31,13 @@ class Style { // this call is essential to reduce the headache in the main code 
   static const double Large = 25.0;
 
   // this method returns a textstyle object, reduces the complexity in the main code.
-  static TextStyle Custom(double ptSize, String fontFamily, FontWeight weight, {FontStyle style = FontStyle.normal}) {
+  static TextStyle Custom(double ptSize, String fontFamily, FontWeight weight, {FontStyle style = FontStyle.normal, Color color: Colors.black}) {
     return TextStyle(
       fontSize: ptSize,
       fontFamily: fontFamily,
       fontWeight: weight,
-      fontStyle: style
+      fontStyle: style,
+      color: color,
     );
   }
 }
