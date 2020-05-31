@@ -5,7 +5,7 @@ import json
 from flask import jsonify
 
 # URLs
-news_url = 'https://www.9news.com.au/' # The 9News API
+news_url = 'https://www.9news.com.au/' # The 9News Website
 
 class NewsScraper:
 	# Init: Takes the Count
