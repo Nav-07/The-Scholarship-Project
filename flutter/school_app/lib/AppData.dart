@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:school_app/Screens/Home.dart';
 import 'package:school_app/Screens/Tasks.dart';
+import 'package:school_app/TestData.dart';
 
 class Navigation { // Essential for Navigation.
   static int currentIndex = 0; // This value is used in the BottomNavigationBar
   static Widget getCurrentState() {
     Widget returnValue; // This is the return value of this function
-    if (currentIndex == 0)
-      returnValue = Home(); // returnValue is equal to Home if currentIndex is 0.
-    else if (currentIndex == 1)
+    if (currentIndex == 0) {
+      returnValue = Home();
+    }
+    else if (currentIndex == 1) {
+      TestDataData.reset(); // Make Sure to reset the data to avoid any bugs in later production
       returnValue = Tasks();
+    }
     return returnValue; // Return the widget based on the currentIndex Variable.
   }
 }

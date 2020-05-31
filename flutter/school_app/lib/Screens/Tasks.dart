@@ -8,10 +8,6 @@ class Tasks extends StatefulWidget {
 class TasksState extends State<Tasks> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        createList(),
-      ],
-    );
+    return TestData();
   }
 }

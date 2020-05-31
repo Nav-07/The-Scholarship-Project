@@ -28,7 +28,8 @@ Widget createList() {
             title: Text(assignments[index].name, style: Style.Custom(Style.Medium, 'Montserrat', FontWeight.normal),),
 
             onTap: () {
-              // Todo: trigger the show details function
+              // show the widget defined inside showDetails()
+
             },
           ),
         ),
@@ -60,4 +61,76 @@ Widget showDetails(TestAssignment assignment) {
       ],
     ),
   );
+}
+
+// the data class holds all the current state data and can be modified outside of the class.
+class TestDataData {
+  static int currentState = 0;
+  static TestAssignment currentAssignment = null;
+
+  static void reset() { // this function resets the whole screen and returns it back to normal;
+    currentState = 0;
+    currentAssignment = null;
+  }
+}
+// This class simplifies navigation
+class TestData extends StatefulWidget {
+  createState() => TestDataState();
+}
+class TestDataState extends State<TestData> {
+  Widget showList() {
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: assignments.length,
+      itemBuilder: (BuildContext context, int index) {
+        return Container( // use the container for margin
+          margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+          child: Material( // material for elevation
+            elevation: 5.0,
+            child: ListTile(
+              title: Text(assignments[index].name, style: Style.Custom(Style.Medium, 'Montserrat', FontWeight.normal),),
+              onTap: () {
+                // set the current state to 1 and current assignments to 1
+                setState(() {
+                  TestDataData.currentAssignment = assignments[index];
+                  TestDataData.currentState = 1;
+                });
+              },
+            ),
+          ),
+        );
+      },
+    );
+  } // show the list of assignments
+  Widget showDetails() {
+    return Column(
+      children: <Widget>[
+        // container for edit name
+        Container(
+          child: ListTile(
+            title: Text(TestDataData.currentAssignment.name, style: Style.Custom(Style.Medium, 'Montserrat', FontWeight.normal),),
+            trailing: Icon(Icons.edit, color: Colors.black,),
+          )
+        ),
+        // container for edit subject
+        Container(
+          child: ListTile(
+            title: Text(TestDataData.currentAssignment.subject, style: Style.Custom(Style.Medium, 'Montserrat', FontWeight.normal),),
+            trailing: Icon(Icons.edit, color: Colors.black),
+          ),
+        ),
+      ],
+    );
+  } // show the details of the assignment
+
+  Widget getCurrentState() {
+    if (TestDataData.currentState == 0)
+      return showList();
+    else
+      return showDetails();
+  } // get current state of the screen by using the currentState variable
+  @override
+  Widget build(BuildContext context) {
+    return getCurrentState();
+  }
 }

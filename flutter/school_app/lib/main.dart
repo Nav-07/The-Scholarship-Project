@@ -13,6 +13,7 @@ class ApplicationState extends State<Application> {
       title: 'School Assignment Tracker',
       // The Home Widget
       home: AppView(), // The AppView Objects returns the structure where the app can be built upon.
+      debugShowCheckedModeBanner: false, // settings this to false means we cannot see the ugly debug banner.
     );
   }
 }
