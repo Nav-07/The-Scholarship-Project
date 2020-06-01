@@ -71,7 +71,7 @@ class AppViewState extends State<AppView> {
                 children: <Widget>[
                   // get the home page
                   Container(
-                    margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.17+25),
+                    margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.17+65/2+10),
                     child: Home(),
                   ),
                   // get the teaks page
