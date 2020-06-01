@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:school_app/AppView.dart';
 
+import 'UI/AppView.dart';
+
+// Create the Flutter App by Defining an Application Class
 class Application extends StatefulWidget {
   createState() => ApplicationState();
 }
 class ApplicationState extends State<Application> {
   @override
   Widget build(BuildContext context) {
-    // Return a Material App from the Build Function.
     return MaterialApp(
-      // The Title of the App
       title: 'School Assignment Tracker',
-      // The Home Widget
-      home: AppView(), // The AppView Objects returns the structure where the app can be built upon.
-      debugShowCheckedModeBanner: false, // settings this to false means we cannot see the ugly debug banner.
+      debugShowCheckedModeBanner: false,
+      home: AppView(),
     );
   }
 }
 
-// The main function
-void main() => runApp(Application()); // Run the app
+// Run the App
+void main() => runApp(Application());
