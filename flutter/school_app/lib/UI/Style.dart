@@ -18,4 +18,5 @@ class FontSize {
   static const double Medium = 15.0;
   static const double Large = 20.0;
   static const double ExtraLarge = 25.0;
+  static const double DoubleExtraLarge = 35.0;
 }

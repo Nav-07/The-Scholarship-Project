@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:school_app/UI/Pages/Home.dart';
 import 'package:school_app/UI/Style.dart';
 
 class AppView extends StatefulWidget {
@@ -51,12 +53,27 @@ class AppViewState extends State<AppView> {
                 ],
               ),
             ),
+            Container(
+              width: 65,
+              height: 65,
+              margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.17-65/2, left: MediaQuery.of(context).size.width*0.5-65/2),
+              child: FloatingActionButton(
+                child: Icon(FontAwesomeIcons.plus, size: FontSize.DoubleExtraLarge, color: Colors.black,),
+                backgroundColor: Colors.white,
+                onPressed: () {
+                  // show the dialog box for new assignment  
+                },
+              ),
+            ),
             // This is where all the tabs reside
             Container(
               child: TabBarView( // the tab controller
                 children: <Widget>[
                   // get the home page
-                  Container(),
+                  Container(
+                    margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.17+25),
+                    child: Home(),
+                  ),
                   // get the teaks page
                   Container(),
                   // get the settings page
