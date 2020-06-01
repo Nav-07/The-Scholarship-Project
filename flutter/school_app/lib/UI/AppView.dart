@@ -21,9 +21,9 @@ class AppViewState extends State<AppView> {
             indicatorColor: Colors.white,
             indicatorSize: TabBarIndicatorSize.label,
             tabs: <Widget>[
-              Tab(icon: Icon(Icons.home)),
-              Tab(icon: Icon(Icons.check)),
-              Tab(icon: Icon(Icons.settings)),
+              Tab(icon: Icon(FontAwesomeIcons.home)),
+              Tab(icon: Icon(FontAwesomeIcons.database)),
+              Tab(icon: Icon(FontAwesomeIcons.cog)),
             ],
           ),
         ),
@@ -46,7 +46,7 @@ class AppViewState extends State<AppView> {
                   Container(
                     margin: EdgeInsets.only(top: (MediaQuery.of(context).size.height*0.17*0.5)-FontSize.ExtraLarge, left: 25),
                     child: Text(
-                      'Assignments',
+                      'High Schooler',
                       style: Custom.CustomStyle(FontSize.ExtraLarge, Colors.white, FontWeight.bold, 'Montserrat'),
                     ),
                   ),

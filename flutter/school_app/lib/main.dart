@@ -10,7 +10,7 @@ class ApplicationState extends State<Application> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'School Assignment Tracker',
+      title: 'High Schooler',
       debugShowCheckedModeBanner: false,
       home: AppView(),
     );
