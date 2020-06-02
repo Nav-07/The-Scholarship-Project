@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:school_app/UI/Pages/Home.dart';
+import 'package:school_app/UI/Pages/Settings.dart';
 import 'package:school_app/UI/Style.dart';
 
 class AppView extends StatefulWidget {
@@ -72,12 +73,19 @@ class AppViewState extends State<AppView> {
                   // get the home page
                   Container(
                     margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.17+65/2+10),
-                    child: Home(),
+                    child: SingleChildScrollView(
+                      child: Home(),
+                    ),
                   ),
-                  // get the teaks page
+                  // get the storage page
                   Container(),
                   // get the settings page
-                  Container(),
+                  Container(
+                    margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.17+65/2+10),
+                    child: SingleChildScrollView(
+                      child: Settings(),
+                    ),
+                  ),
                 ],
               ),
             ),

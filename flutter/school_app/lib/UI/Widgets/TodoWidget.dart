@@ -20,7 +20,7 @@ class TodoWidgetState extends State<TodoWidget> {
           children: <Widget>[
             Checkbox(
               value: task.isCompleted,
-              activeColor: Colors.black,
+              activeColor: Color(0xff3498db),
               onChanged: (bool value) {
                 // change the value
                 setState(() {
