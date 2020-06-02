@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:school_app/UI/Widgets/Todo.dart';
+import 'package:school_app/UI/Widgets/TodoWidget.dart';
 
 // The StatefulWidget
 class Home extends StatefulWidget {
