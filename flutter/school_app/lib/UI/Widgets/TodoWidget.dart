@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:school_app/UI/Modals/Task.dart';
 import 'package:school_app/UI/Style.dart';
 
 // The Stateful Widget Class
@@ -7,6 +8,7 @@ class TodoWidget extends StatefulWidget {
 }
 // The extended state class
 class TodoWidgetState extends State<TodoWidget> {
+  Task task = Task(isCompleted: false);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,9 +19,13 @@ class TodoWidgetState extends State<TodoWidget> {
         child: Row(
           children: <Widget>[
             Checkbox(
-              value: false,
+              value: task.isCompleted,
+              activeColor: Colors.black,
               onChanged: (bool value) {
                 // change the value
+                setState(() {
+                  task.isCompleted = !task.isCompleted;
+                });
               },
             ), // the checkbox to mark assignments done
             Text(
