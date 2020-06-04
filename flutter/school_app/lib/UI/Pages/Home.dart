@@ -21,15 +21,6 @@ class HomeState extends State<Home> {
 
   Widget getList() {
     // this method returns a list of assignments as a list tile, with a radio button or similar.
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: 5,
-      itemBuilder: (BuildContext context, int index) {
-        return Padding(
-          padding: EdgeInsets.only(bottom: 10),
-          child: TodoWidget(),
-        );
-      },
-    );
+    return Container();
   }
 }

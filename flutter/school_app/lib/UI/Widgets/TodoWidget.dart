@@ -16,23 +16,28 @@ class TodoWidgetState extends State<TodoWidget> {
       child: Material(
         borderRadius: BorderRadius.all(Radius.circular(10)),
         color: Color(0xff3498db), // Set the color similar to the top notch and tab bar color
-        child: Row(
-          children: <Widget>[
-            Checkbox(
-              value: task.isCompleted,
-              activeColor: Color(0xff3498db),
-              onChanged: (bool value) {
-                // change the value
-                setState(() {
-                  task.isCompleted = !task.isCompleted;
-                });
-              },
-            ), // the checkbox to mark assignments done
-            Text(
-              'Don\'t Know',
-              style: Custom.CustomStyle(FontSize.ExtraLarge, Colors.white, FontWeight.bold, 'Montserrat'),
-            ), // the text displays the name of the assignment
-          ],
+        child: ListTile(
+          key: UniqueKey(),
+          leading: Checkbox(
+            
+            value: task.isCompleted,
+            activeColor: Color(0xff3498db),
+            onChanged: (bool value) {
+              // change the value
+              setState(() {
+                task.isCompleted = !task.isCompleted;
+              });
+            },
+          ), // the checkbox to mark assignments done
+          title: Text(
+            'Don\'t Know',
+            style: Custom.CustomStyle(FontSize.ExtraLarge, Colors.white, FontWeight.bold, 'Montserrat'),
+            textAlign: TextAlign.left,
+          ), // the text displays the name of the assignment,
+          trailing: Icon(
+            Icons.drag_handle,
+            color: Colors.white,
+          ),
         ),
       ),
     );
